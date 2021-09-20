@@ -1,0 +1,21 @@
+<h3>Update Student</h3>
+<div style="width: 400px;">
+  <form [formGroup]="studenData">
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input [class.is-invalid] = "studenData.get('firstName').invalid && studenData.get('firstName').touched" type="text" class="form-control" id="firstName" required [(ngModel)]="student.firstName" name="firstName" formControlName="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input [class.is-invalid] = "studenData.get('lastName').invalid && studenData.get('lastName').touched" type="text" class="form-control" id="lastName" required [(ngModel)]="student.lastName" name="lastName" formControlName="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email Id</label>
+      <input [class.is-invalid] = "studenData.get('emailId').invalid && studenData.get('emailId').touched" type="email" class="form-control" id="emailId" required [(ngModel)]="student.emailId" name="emailId" formControlName="emailId">
+    </div>
+
+    <button type="submit" [disabled]="!studenData.valid" class="btn btn-success" (click)="onSubmit()">Submit</button>
+  </form>
+</div>
