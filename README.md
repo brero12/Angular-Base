@@ -17,5 +17,5 @@ docker pull brero12/angularspringboot: v1
 To execute:
 docker run --rm -d -p 8081: 8081 --name angularspringboot brero12/angularspringboot: v1
 
-To try:
+To try (Behind zuul gateway app):
 http://ec2-18-223-117-185.us-east-2.compute.amazonaws.com/
